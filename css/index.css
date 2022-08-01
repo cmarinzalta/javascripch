@@ -38,7 +38,7 @@ img {
 header {
   background-color: #9b0d0d;
   height: 15vh;
-  font-family: "Yeseva One", cursive;
+  font-family: "Autour One", cursive;
   font-size: 3em;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   z-index: 10;
@@ -52,42 +52,13 @@ header {
     header .navbar .btn .iconify {
       font-size: 5em;
       color: #ececec; }
-    header .navbar .offcanvas {
-      background-color: #9b0d0d; }
-      header .navbar .offcanvas-header .offcanvas-title {
-        font-size: 3em;
-        font-family: "Autour One", cursive;
-        font-weight: 800; }
-      header .navbar .offcanvas-body {
-        font-size: 3em;
-        font-family: "Yeseva One", cursive;
-        height: 60%;
-        flex-grow: 0; }
-      header .navbar .offcanvas form {
-        margin: 0 auto; }
-        header .navbar .offcanvas form .form-check-input {
-          margin: auto 1rem;
-          height: 1.5em;
-          width: 3.5em; }
-          header .navbar .offcanvas form .form-check-input:focus {
-            box-shadow: none;
-            border-color: rgba(0, 0, 0, 0.4);
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>"); }
-          header .navbar .offcanvas form .form-check-input:checked {
-            background-color: #ececec;
-            border: none;
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>"); }
-        header .navbar .offcanvas form .form-check-label {
-          font-size: 2em;
-          line-height: 0.8em; }
-          header .navbar .offcanvas form .form-check-label .iconify {
-            margin: auto 0; }
     header .navbar__logo {
       margin: 0;
       height: 15vh;
       display: flex;
       align-items: center; }
       header .navbar__logo a {
-        color: #ececec; }
+        color: #ececec;
+        font-size: 1.5em; }
 
 /*views*/
