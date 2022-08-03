@@ -61,7 +61,7 @@ function quizzHistoriaDeAviacion () {
         } 
 
     //5
-    respuesta= prompt("¿Como se llamaba la primer mujer piloto?\n1- Raymonde de Laroche \n2- Amelia Earhart \n3- Emma Catalina Encinas Aguayo ")
+    respuesta= prompt("¿Como se llamaba la primer mujer piloto?\n1- Raymonde de Laroche \n2- Amelia Earhart \n3- Emma Catalina Encinas Aguayo")
       if (respuesta ==2  ) {
         alert ("Correcto")
         puntaje +=2
@@ -149,7 +149,7 @@ function quizzPilotoAvanzado () {
   while ( puntaje == 0){
     
     //1
-    let respuesta = prompt("¿Para que sirve el ILS? \n1- Para hacer un aterrizaje instrumental \n2- Para localizar el aeropuesto \n3- Para cogerregir el giro direccional")
+    let respuesta = prompt("¿Para que sirve el ILS? \n1- Para hacer un aterrizaje instrumental \n2- Para localizar el aeropuerto \n3- Para cogerregir el giro direccional")
     if (respuesta == 1) {
       alert ("Correcto")
       puntaje +=2
