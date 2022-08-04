@@ -33,7 +33,7 @@ const quizzPilotoAvanzado = [];
     let puntaje = 0
     let error = 0 
 function queEmpieceElJuego (){
-for(i =0; i<6; i++){
+for(i =0; i<quizzHistoriaDeAviacion.length; i++){
     let quizz = quizzHistoriaDeAviacion[i]
     let pregunta = quizz.pregunta
     let respuesta1 = quizz.respuestaCorrecta
@@ -49,9 +49,8 @@ for(i =0; i<6; i++){
         error ++
         puntaje -1
     }
-    
-    alert("Termino el juego, tu puntaje es: " + puntaje + "\nTuviste " + error + "errores")
 }
+    alert("Termino el juego, tu puntaje es: " + puntaje + " puntos\nTuviste " + error + " errores")
 }
 
 
