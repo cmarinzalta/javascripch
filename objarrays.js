@@ -47,7 +47,7 @@ for(i =0; i<quizzHistoriaDeAviacion.length; i++){
     }else {
         alert("Incorrecto la respuesta era " + respuesta1)
         error ++
-        puntaje -1
+        puntaje --
     }
 }
     alert("Termino el juego, obtuviste: " + puntaje + " puntos\nTuviste " + error + " errores")
