@@ -50,12 +50,10 @@ for(i =0; i<quizzHistoriaDeAviacion.length; i++){
         puntaje -1
     }
 }
-    alert("Termino el juego, tu puntaje es: " + puntaje + " puntos\nTuviste " + error + " errores")
+    alert("Termino el juego, obtuviste: " + puntaje + " puntos\nTuviste " + error + " errores")
 }
 
-
 queEmpieceElJuego ();
-console.log(queEmpieceElJuego ());
 
 
 
@@ -82,4 +80,5 @@ console.log(queEmpieceElJuego ());
 
 
 
+probarCodigo()
 }
