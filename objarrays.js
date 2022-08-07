@@ -11,8 +11,9 @@ class  quizz {
 }
 const trivia = [
     {
-        categoria: quizzHistoriaDeAviacion = [
-            {
+        categoria: "Historia De Aviacion",
+        quizz : [
+             {
                 pregunta:"¿Cuantos aviones militares y comerciales hay en el mundo?", 
                 respuestaCorrecta: "39.000",  
                 respuestaIncorrectaUno: "26.000", 
@@ -42,10 +43,11 @@ const trivia = [
                 respuestaIncorrectaUno:"Raymonde de Laroche",
                 respuestaIncorrectaDos:"Emma Catalina Encinas Aguayo"
             }
-        ]
+        ]        
     },
     {
-        categoria: quizzPilotoPrincipiante = [
+        categoria: "Piloto Principiante",
+        quizz : [
             {
                 pregunta:"¿Para que sirve el altimetro?", 
                 respuestaCorrecta:" Medir la altura",
@@ -79,7 +81,8 @@ const trivia = [
         ]
     },
     {
-        categoria: quizzPilotoAvanzado= [
+        categoria: "Piloto Avanzado",
+        quizz : [
             {
                 pregunta:"¿Para que sirve el ILS?", 
                 respuestaCorrecta:"Para hacer un aterrizaje instrumental",
@@ -113,6 +116,49 @@ const trivia = [
         ]
     }  
 ]
+
+
+function iniciar(elegirCategoria){
+    let puntaje = 0
+    let error = 0
+    let busqueda = trivia.find((item)=> item.categoria == elegirCategoria)
+    if (busqueda != undefined) {
+        busqueda.quizz.forEach((item) => {
+            let respuesta = prompt(
+                item.pregunta + "\n" + item.respuestaCorrecta + "\n" + item.respuestaIncorrectaDos + "\n" + item.respuestaIncorrectaUno
+            )
+        if(respuesta == item.respuestaCorrecta){
+            alert("¡Correcto!")
+            puntaje += 2
+        } else {
+            alert ("Incorrecto, la respuesta correcta es " + item.respuestaCorrecta)
+            puntaje --
+            error ++
+        }      
+    }
+    )
+
+}
+alert("Obtuviste: " + puntaje + " puntos\nTuviste " + error + " errores")
+}
+
+let confirmacion = true
+while (confirmacion) {
+    let mensaje = " "
+    trivia.forEach(item=> mensaje += "\n" + item.categoria)
+
+    let eleccion = prompt("Las categorias son: " + mensaje)
+    if (eleccion != ""){
+        iniciar(eleccion)
+    } else {
+        alert ("Opcion invalida")
+    }
+    confirmacion = confirm("¿Desea seleccionar otra categoria?")
+} 
+
+
+
+
 
 
 
