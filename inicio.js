@@ -1,23 +1,26 @@
+let inicioDeSesion=document.querySelector('#btnInicioSesion')
+inicioDeSesion.addEventListener("click", Ingresar)
 function Ingresar(){
-    emailIngresado=document.getElementById('ingreseEmail').value;
-    claveIngresada=document.getElementById('ingreseClave').value;
+
+    let emailIngresado=document.querySelector('#ingreseEmail').value;
+    let claveIngresada=document.querySelector('#ingreseClave').value;
+    let textoInicio=document.querySelector('#inicioSesion');
     let mensaje;
 
     let listaDeUs= LlamarUs();
     let retornarUs = listaDeUs.find((usuario)=>usuario.email==emailIngresado)
     if(retornarUs){
         if(retornarUs.clave==claveIngresada){
-            let tituloUsuario =document.getElementsByClassName('bienvenida');
-            for(elementoTitulo of tituloUsuario) {
-                elementoTitulo.innerText = `Bienvenido ${emailIngresado}`;
-                document.getElementById('InicioSesion').style.visibility="hidden";
-            mensaje="Bienvenido, ya puedes registrar tus puntajes"
-            }
+            mensaje= `Bienvenido ${emailIngresado}`
+            textoInicio.innerText=mensaje
+            
         } else {
             mensaje= "Ups! Algo salio mal"
+            textoInicio.innerText=mensaje
         }
     } else {
         mensaje= "Ups! Algo salio mal"
+        textoInicio.innerText=mensaje
     }
    
 }
