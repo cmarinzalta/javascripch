@@ -4,7 +4,7 @@ let ptjeUsuario =  {
     errores:0,
     puntos:0 
 }
-let ptjeGuardado = JSON.parse(localStorage.getItem('ultimoPuntaje'))
+let ptjeGuardado = JSON.parse(localStorage.getItem('ultimoPuntaje')) || ptjeUsuario
 let quizzSection = document.querySelector("#histAviacion")
 let historia = trivia.filter(item=>item.categoria == "Historia De Aviacion")
 
