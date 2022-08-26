@@ -44,15 +44,21 @@ historia[0].quizz.forEach(item=>{
     container.append(footer)
 })
 
-let btnRespuestas = document.getElementsByClassName('trivia__option')
+let btnRespuestas = document.querySelectorAll('.trivia__option')
 for (const btn of btnRespuestas) {
     btn.addEventListener('click',()=>{
         if(historia[0].correctas.find(esta => esta == btn.value)){
             btn.style.backgroundColor = '#1fb77fd9'
             ptjeUsuario.puntos+=2
+            for (var i = 0; i < btnRespuestas.length; i++) {
+                btnRespuestas[i].disabled =true;
+              }
         }else{
             btn.style.backgroundColor = '#f12c4acf'
             ptjeUsuario.errores++
+            for (var i = 0; i < btnRespuestas.length; i++) {
+                btnRespuestas[i].disabled =true;
+              }
         }
     })
 }
@@ -81,7 +87,9 @@ for (const btn of btnNext) {
         console.log(divOcultar);
         divOcultar.hidden = true
         }
-        
+        for (var i = 0; i < btnRespuestas.length; i++) {
+            btnRespuestas[i].disabled = false;
+          }
 
         
     })
