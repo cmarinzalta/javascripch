@@ -51,14 +51,30 @@ for (const btn of btnRespuestas) {
             btn.style.backgroundColor = '#1fb77fd9'
             ptjeUsuario.puntos+=2
             for (var i = 0; i < btnRespuestas.length; i++) {
-                btnRespuestas[i].disabled =true;
+                btnRespuestas[i].disabled =true
               }
+              Toastify ({
+                text: 'Sumaste 2 puntos',
+                className: "info",
+                duration: 1000,
+                style: {
+                  background: "linear-gradient(to right, #00b09b, #96c93d)",
+                }
+            }).showToast(btnRespuestas)
         }else{
             btn.style.backgroundColor = '#f12c4acf'
             ptjeUsuario.errores++
             for (var i = 0; i < btnRespuestas.length; i++) {
                 btnRespuestas[i].disabled =true;
               }
+              Toastify ({
+                text: 'Tuviste un error',
+                className: "info",
+                duration: 1000,
+                style: {
+                  background: "linear-gradient(to right, #e21a1a, #e95562)",
+                }
+            }).showToast(btnRespuestas)
         }
     })
 }
