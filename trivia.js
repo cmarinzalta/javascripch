@@ -1,16 +1,13 @@
 // import {trivia} from './categoria.js'
 
 let trivia = []
-const iniciarTrivia = () => {
+
     fetch ('categorias.json')
     .then( (resp) => resp.json())
     .then( (data) =>{
         trivia = data
-        
+        mostrarTrivia() 
     })
-}
-
-iniciarTrivia()
 
 let ptjeUsuario =  {
     errores:0,
@@ -21,6 +18,8 @@ let ptjeGuardado = JSON.parse(localStorage.getItem('ultimoPuntaje')) || ptjeUsua
 let categoriaSelec = JSON.parse(localStorage.getItem('categoria')) || 'Hisotira De Aviacion'
 let quizzSection = document.querySelector("#histAviacion")
 let historia = trivia.filter(item=>item.categoria == categoriaSelec)
+
+const mostrarTrivia = () => {
 
 historia[0].quizz.forEach(item=>{
     let div = document.createElement('div')
@@ -55,6 +54,7 @@ historia[0].quizz.forEach(item=>{
                     </div>`
     container.append(footer)
 })
+
 
 let btnRespuestas = document.querySelectorAll('.trivia__option')
 for (const btn of btnRespuestas) {
@@ -129,4 +129,5 @@ function finalizar() {
     quizzSection.innerHTML= `<h1 class="fs-1 text-center text-white">El juego Termino! Conseguiste: ${ptjeUsuario.puntos} puntos. \n Tuviste: ${ptjeUsuario.errores} errores.</h1>
     <p class="fs-3 text-center text-white mt-3">Tu puntaje anterior fue de ${ptjeGuardado.puntos}</p>`
     localStorage.setItem('ultimoPuntaje',JSON.stringify(ptjeUsuario))
+}
 }
