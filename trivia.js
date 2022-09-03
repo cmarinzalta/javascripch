@@ -17,9 +17,10 @@ let ptjeUsuario =  {
 let ptjeGuardado = JSON.parse(localStorage.getItem('ultimoPuntaje')) || ptjeUsuario
 let categoriaSelec = JSON.parse(localStorage.getItem('categoria')) || 'Hisotira De Aviacion'
 let quizzSection = document.querySelector("#histAviacion")
-let historia = trivia.filter(item=>item.categoria == categoriaSelec)
 
 const mostrarTrivia = () => {
+
+let historia = trivia.filter(item=>item.categoria == categoriaSelec)
 
 historia[0].quizz.forEach(item=>{
     let div = document.createElement('div')
