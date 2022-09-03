@@ -1,4 +1,16 @@
-import {trivia} from './categoria.js'
+// import {trivia} from './categoria.js'
+
+let trivia = []
+const iniciarTrivia = () => {
+    fetch ('categorias.json')
+    .then( (resp) => resp.json())
+    .then( (data) =>{
+        trivia = data
+        
+    })
+}
+
+iniciarTrivia()
 
 let ptjeUsuario =  {
     errores:0,
