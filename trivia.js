@@ -60,7 +60,7 @@ historia[0].quizz.forEach(item=>{
 let btnRespuestas = document.querySelectorAll('.trivia__option')
 for (const btn of btnRespuestas) {
     btn.addEventListener('click',()=>{
-        if(historia[0].correctas.find(esta => esta == btn.value)){
+        if(historia[0].correctas.find(esta => esta.includes(btn.value))){
             btn.style.backgroundColor = '#1fb77fd9'
             ptjeUsuario.puntos+=2
             for (var i = 0; i < btnRespuestas.length; i++) {
