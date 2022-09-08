@@ -1,8 +1,6 @@
-// import {trivia} from './categoria.js'
-
 let trivia = []
 
-    fetch ('categorias.json')
+    fetch ('script/categorias.json')
     .then( (resp) => resp.json())
     .then( (data) =>{
         trivia = data
@@ -127,8 +125,19 @@ for (const btn of btnNext) {
 
 function finalizar() {
     quizzSection.innerHTML= ''
-    quizzSection.innerHTML= `<h1 class="fs-1 text-center text-white">El juego Termino! Conseguiste: ${ptjeUsuario.puntos} puntos. \n Tuviste: ${ptjeUsuario.errores} errores.</h1>
-    <p class="fs-3 text-center text-white mt-3">Tu puntaje anterior fue de ${ptjeGuardado.puntos}</p>`
+    quizzSection.innerHTML= `
+                            <h2 class="fs-1 text-center text-white px-2">¡EL JUEGO TERMINO!</h2> 
+                            <h2 class="fs-3 text-center text-white">Conseguiste: ${ptjeUsuario.puntos} puntos.</h2>
+                            <h2 class="fs-3 text-center text-white"> Tuviste: ${ptjeUsuario.errores} errores.</h2>
+                            <p class="fs-3 text-center text-white mt-3">Tu puntaje anterior fue de ${ptjeGuardado.puntos}</p>
+                            <div class="d-flex justify-content-center">
+                            <a href="../index.html#services"><button class="btn btn-primary"> Seguir jugando </button></a>
+                            </div> 
+                            `
+
     localStorage.setItem('ultimoPuntaje',JSON.stringify(ptjeUsuario))
+
+    
+
 }
 }
