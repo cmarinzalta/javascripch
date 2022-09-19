@@ -131,7 +131,7 @@ function finalizar() {
                             <h2 class="fs-3 text-center text-white"> Tuviste: ${ptjeUsuario.errores} errores.</h2>
                             <p class="fs-3 text-center text-white mt-3">Tu puntaje anterior fue de ${ptjeGuardado.puntos}</p>
                             <div class="d-flex justify-content-center">
-                            <a href="../index.html"><button class="btn btn-primary"> Seguir jugando </button></a>
+                            <a href="./index.html#services"><button class="btn btn-primary"> Seguir jugando </button></a>
                             </div> 
                             `
 
